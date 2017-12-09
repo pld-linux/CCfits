@@ -9,9 +9,9 @@ Version:	2.5
 Release:	1
 License:	MIT-like
 Group:		Libraries
-Source0:	http://heasarc.gsfc.nasa.gov/fitsio/ccfits/%{name}-%{version}.tar.gz
+Source0:	https://heasarc.gsfc.nasa.gov/fitsio/ccfits/%{name}-%{version}.tar.gz
 # Source0-md5:	e77a679fc2b67cf38e53f4011821213b
-URL:		http://heasarc.gsfc.nasa.gov/fitsio/ccfits/
+URL:		https://heasarc.gsfc.nasa.gov/fitsio/ccfits/
 BuildRequires:	cfitsio-devel >= 3.080
 BuildRequires:	libstdc++-devel >= 2.95.2
 Requires:	cfitsio >= 3.080
