@@ -6,7 +6,7 @@ Summary:	Object oriented C++ interface to CFITSIO library
 Summary(pl.UTF-8):	Zorientowany obiektowo interfejs C++ do biblioteki CFITSIO
 Name:		CCfits
 Version:	2.5
-Release:	2
+Release:	3
 License:	MIT-like
 Group:		Libraries
 Source0:	https://heasarc.gsfc.nasa.gov/fitsio/ccfits/%{name}-%{version}.tar.gz
