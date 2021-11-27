@@ -5,15 +5,16 @@
 Summary:	Object oriented C++ interface to CFITSIO library
 Summary(pl.UTF-8):	Zorientowany obiektowo interfejs C++ do biblioteki CFITSIO
 Name:		CCfits
-Version:	2.5
-Release:	3
+Version:	2.6
+Release:	1
 License:	MIT-like
 Group:		Libraries
 Source0:	https://heasarc.gsfc.nasa.gov/fitsio/ccfits/%{name}-%{version}.tar.gz
-# Source0-md5:	e77a679fc2b67cf38e53f4011821213b
+# Source0-md5:	442a2e8ca022b35402b189d146ba8ddd
 URL:		https://heasarc.gsfc.nasa.gov/fitsio/ccfits/
 BuildRequires:	cfitsio-devel >= 3.080
-BuildRequires:	libstdc++-devel >= 2.95.2
+BuildRequires:	libstdc++-devel >= 6:5
+BuildRequires:	rpm-build >= 4.6
 Requires:	cfitsio >= 3.080
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,7 +38,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do CCfits
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	cfitsio-devel >= 3.080
-Requires:	libstdc++-devel >= 2.95.2
+Requires:	libstdc++-devel >= 6:5
 
 %description devel
 Header files and development documentation for CCfits.
@@ -61,6 +62,7 @@ Statyczna wersja biblioteki CCfits.
 Summary:	API documentation for CCfits library
 Summary(pl.UTF-8):	Dokumentacja API biblioteki CCfits
 Group:		Documentation
+BuildArch:	noarch
 
 %description apidocs
 API documentation for CCfits library.
@@ -69,7 +71,7 @@ API documentation for CCfits library.
 Dokumentacja API biblioteki CCfits.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %configure \
@@ -102,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc CCfits-2.5.pdf
+%doc CCfits-2.6.pdf
 %attr(755,root,root) %{_libdir}/libCCfits.so
 %{_includedir}/CCfits
 %{_pkgconfigdir}/CCfits.pc
