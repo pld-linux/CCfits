@@ -5,12 +5,12 @@
 Summary:	Object oriented C++ interface to CFITSIO library
 Summary(pl.UTF-8):	Zorientowany obiektowo interfejs C++ do biblioteki CFITSIO
 Name:		CCfits
-Version:	2.6
-Release:	2
+Version:	2.7
+Release:	1
 License:	MIT-like
 Group:		Libraries
-Source0:	https://heasarc.gsfc.nasa.gov/fitsio/ccfits/%{name}-%{version}.tar.gz
-# Source0-md5:	442a2e8ca022b35402b189d146ba8ddd
+Source0:	https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/ccfits/%{name}-%{version}.tar.gz
+# Source0-md5:	e071c1d6cfef00a6e4835d0b67252fcf
 URL:		https://heasarc.gsfc.nasa.gov/fitsio/ccfits/
 BuildRequires:	cfitsio-devel >= 3.080
 BuildRequires:	libstdc++-devel >= 6:5
@@ -104,7 +104,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc CCfits-2.6.pdf
 %attr(755,root,root) %{_libdir}/libCCfits.so
 %{_includedir}/CCfits
 %{_pkgconfigdir}/CCfits.pc
@@ -117,4 +116,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files apidocs
 %defattr(644,root,root,755)
-%doc html/*.{css,html,js,png}
+%doc CCfits-2.7.pdf html/*.{css,html,js,png}
